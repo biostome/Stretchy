@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  SwiftApp
+//  Stretchy
 //
-//  Created by wangliang on 2019/3/29.
-//  Copyright © 2019 wangliang. All rights reserved.
+//  Created by nathan on 2019/4/6.
+//  Copyright © 2019年 nathan. All rights reserved.
 //
 
 import UIKit
@@ -15,16 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = UIColor.white
-        
-        let vc = ViewController(style: UITableView.Style.plain);
-        
-        //根视图是登录页面
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
-        
+        window = UIWindow()
+        window?.rootViewController = StretchyCollectionViewController(collectionViewLayout:StretchyHeaderLayout())
         return true
     }
 
